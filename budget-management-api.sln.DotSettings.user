@@ -1,0 +1,49 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2a3e670d_002Da3f4_002D45de_002D9d1a_002D2f60cd0ef126/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ShouldReturnGoldRespone_WhenBuyNewGold" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\user\RiderProjects\budget-management-api\budget-management-api.test" Presentation="&amp;lt;budget-management-api.test&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=35174930_002Db0c0_002D421f_002D8745_002D9c57cb800105/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ShouldGetAllSubCategory" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\user\RiderProjects\budget-management-api\budget-management-api.test" Presentation="&amp;lt;budget-management-api.test&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=38f254d4_002Da638_002D4dac_002D8705_002Dd8390371f1a7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="AuthControllerTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\user\RiderProjects\budget-management-api\budget-management-api.test" Presentation="&amp;lt;budget-management-api.test&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=577c314f_002D08d3_002D4574_002D803c_002D44d96d0e56b7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TransactionServiceReportTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::546A4C74-62BA-4DD4-8075-86393E4C12BF::net6.0::budget_management_api.test.Services.TransactionServiceReportTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::546A4C74-62BA-4DD4-8075-86393E4C12BF::net6.0::budget_management_api.test.Controllers.TransactionReportControllerTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::546A4C74-62BA-4DD4-8075-86393E4C12BF::net6.0::budget_management_api.test.Services.AuthServiceTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::546A4C74-62BA-4DD4-8075-86393E4C12BF::net6.0::budget_management_api.test.Services.TransactionServiceTest.ShouldCreateIncome&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::546A4C74-62BA-4DD4-8075-86393E4C12BF::net6.0::budget_management_api.test.Services.GoldServiceTest.ShouldReturnGoldRespone_WhenBuyNewGold&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=584b0f3b_002Dfd01_002D4d30_002D9555_002D5a5db081ec62/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="SummaryServiceTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\user\RiderProjects\budget-management-api\budget-management-api.test" Presentation="&amp;lt;budget-management-api.test&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=6df6d117_002D45d1_002D4d6a_002Dbee2_002D5896dbb5b63f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_return_wallet_When_AddWalletBalance" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::546A4C74-62BA-4DD4-8075-86393E4C12BF::net6.0::budget_management_api.test.Services.AuthServiceTest&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8723e755_002D0766_002D4d01_002D84d3_002Dcca55a02f9b9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ShouldReturnGoldResponse_WhenBuyGold" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::546A4C74-62BA-4DD4-8075-86393E4C12BF::net6.0::budget_management_api.test.Controllers.GoldControllerTest.ShouldReturnGoldResponse_WhenBuyGold&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=99056117_002Dd638_002D46ff_002D8c7a_002D1faca1117e4c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;budget-management-api.test&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\user\RiderProjects\budget-management-api\budget-management-api.test" Presentation="&amp;lt;budget-management-api.test&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d34f2386_002D78d3_002D4ff2_002Da6e6_002D9ec774a2d226/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ShouldCreateSubCategoryResponse_WhenCreate" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::546A4C74-62BA-4DD4-8075-86393E4C12BF::net6.0::budget_management_api.test.Services.SubCategoryTest.ShouldCreateSubCategoryResponse_WhenCreate&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=efbbcfd1_002Dcf8c_002D4adb_002D8399_002D38663a5ea5eb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Should_return_wallet_When_AddWalletBalance" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::546A4C74-62BA-4DD4-8075-86393E4C12BF::net6.0::budget_management_api.test.Services.WalletServiceTest.Should_return_wallet_When_AddWalletBalance&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=f544b239_002D79da_002D451e_002Dbabb_002Dd62b6b3d2a68/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ShouldCreateSubCategoryResponse_WhenCreate #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\user\RiderProjects\budget-management-api\budget-management-api.test" Presentation="&amp;lt;budget-management-api.test&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
