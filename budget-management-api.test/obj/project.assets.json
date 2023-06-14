@@ -9594,11 +9594,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api.test\\budget-management-api.test.csproj",
+      "projectUniqueName": "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api.test\\budget-management-api.test.csproj",
       "projectName": "budget-management-api.test",
-      "projectPath": "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api.test\\budget-management-api.test.csproj",
+      "projectPath": "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api.test\\budget-management-api.test.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api.test\\obj\\",
+      "outputPath": "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api.test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9615,8 +9615,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api\\budget-management-api.csproj": {
-              "projectPath": "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api\\budget-management-api.csproj"
+            "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api\\budget-management-api.csproj": {
+              "projectPath": "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api\\budget-management-api.csproj"
             }
           }
         }

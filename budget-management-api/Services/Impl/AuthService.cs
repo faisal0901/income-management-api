@@ -12,15 +12,16 @@ public class AuthService : IAuthService
     private readonly IRepository<User> _repository;
     private readonly IPersistence _persistence;
     private readonly IWalletService _walletService;
-
+    private readonly ITokenService _tokenService;
     private readonly IJwtUtil _jwtUtil;
 
-    public AuthService(IRepository<User> repository, IPersistence persistence, IJwtUtil jwtUtil, IWalletService walletService)
+    public AuthService(IRepository<User> repository, IPersistence persistence, IJwtUtil jwtUtil, IWalletService walletService, ITokenService tokenService)
     {
         _repository = repository;
         _persistence = persistence;
         _jwtUtil = jwtUtil;
         _walletService = walletService;
+        _tokenService = tokenService;
     }
     
     public async Task<User> LoadByEmail(string email)
@@ -101,9 +102,9 @@ public class AuthService : IAuthService
         var user = await LoadByEmail(request.Email);
         var verify = BCrypt.Net.BCrypt.Verify(request.Password, user.Password);
         if (!verify) throw new UnauthorizedException("Unauthorized");
-
+      
         var token = _jwtUtil.GenerateToken(user);
-
+        await _tokenService.InsertToken(token, user.Id);
         return new LoginResponse
         {
             Email = user.Email,

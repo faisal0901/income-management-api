@@ -22,6 +22,6 @@ public class User
     public ICollection<Transactional>? Transactionals { get; set; } = null;
     public ICollection<Bill>? Bills { get; set; }= null;
     public ICollection<Wallet>? Wallets { get; set; }= null;
-
+    public ICollection<Token>? Tokens { get; set; }= null;
 
 }

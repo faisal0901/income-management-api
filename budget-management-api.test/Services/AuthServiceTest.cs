@@ -18,17 +18,19 @@ public class AuthServiceTest
     private readonly Mock<IPersistence> _mockPersistence;
     private readonly Mock<IJwtUtil> _jwtUtil;
     private readonly Mock<IWalletService> _walletService;
+    private readonly Mock<ITokenService> _tokenService;
     private User _user;
     
     private IAuthService _authService;
     
-    public AuthServiceTest()
+    public AuthServiceTest(Mock<ITokenService> tokenService)
     {
+        _tokenService = tokenService;
         _mockRepository = new Mock<IRepository<User>>();
         _mockPersistence = new Mock<IPersistence>();
         _jwtUtil = new Mock<IJwtUtil>();
         _walletService = new Mock<IWalletService>();
-        _authService = new AuthService(_mockRepository.Object, _mockPersistence.Object, _jwtUtil.Object, _walletService.Object);
+        _authService = new AuthService(_mockRepository.Object, _mockPersistence.Object, _jwtUtil.Object, _walletService.Object,_tokenService.Object);
         _user = new User
         {
             Id = Guid.NewGuid(),

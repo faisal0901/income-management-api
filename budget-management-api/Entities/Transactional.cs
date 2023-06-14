@@ -19,6 +19,7 @@ public class Transactional
     [Column(name: "user_id")] public Guid UserId { get; set; }
     [Column(name: "sub_category_id")] public Guid? SubCategoryId { get; set; }
     [Column(name: "wallet_id")] public Guid? WalletId { get; set; }
+    public DateTime DeletedAt { get; set; }
     public virtual SubCategory? SubCategory { get; set; } = null;
     public virtual User? User { get; set; }
     public virtual Wallet? Wallet { get; set; } = null;

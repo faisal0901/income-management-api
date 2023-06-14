@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L8lK4i9f11o11Oqa0hWU0FzHXCiD6iYONWyInsAWnXt3TNHCHiKMsZSs+z/UBi+4sYqD/oa6//EeedgreDLSKA==",
+  "dgSpecHash": "RaiYpU4++MPKE/0jysdznm7jhFu+8k+IYq0GzUrQnV6SF7fIbOzqw+FoqXT4+1b5CwAInX+cFjtdhoyit9mCGg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api\\budget-management-api.csproj",
+  "projectFilePath": "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api\\budget-management-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

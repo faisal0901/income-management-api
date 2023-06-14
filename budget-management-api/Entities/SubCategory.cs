@@ -10,5 +10,7 @@ public class SubCategory
     [Column(name: "category_name"), Required]
     public string CategoryName { get; set; }
     [Column(name: "category_id")] public Guid? CategoryId { get; set; }
+    
+    public DateTime DeletedAt { get; set; }
     public virtual Category Category { get; set; }
 }

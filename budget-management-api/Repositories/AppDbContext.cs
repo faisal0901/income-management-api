@@ -13,7 +13,7 @@ public class AppDbContext:DbContext
         public DbSet<Transactional> Transactionals => Set<Transactional>();
         public DbSet<User> Users => Set<User>();
         public DbSet<Wallet> Wallets => Set<Wallet>();
-       
+        public DbSet<Token> Tokens => Set<Token>();
         protected AppDbContext()
         {
                 
@@ -25,6 +25,8 @@ public class AppDbContext:DbContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+                modelBuilder.Entity<Category>()
+                        .ToTable("category", t => t.ExcludeFromMigrations());
                 modelBuilder.Entity<User>(builder =>
                 {
                         builder.HasIndex(user => user.Email).IsUnique();

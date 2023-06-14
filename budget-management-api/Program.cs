@@ -1,5 +1,7 @@
+using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using budget_management_api.Entities;
+using budget_management_api.Exceptions;
 using budget_management_api.Middlewares;
 using budget_management_api.Repositories;
 using budget_management_api.Scheduler;
@@ -54,38 +56,38 @@ builder.Services.AddDbContext<AppDbContext>(optionsBuilder =>
     optionsBuilder.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-builder.Services.AddQuartz( async q =>
-{
-    q.UseMicrosoftDependencyInjectionScopedJobFactory();
-    
-        
-    using (var context = new AppDbContext(new DbContextOptionsBuilder<AppDbContext>().UseSqlServer("Server=FAISAL;Database=DB_budgetManagemenet;Trusted_Connection=True;TrustServerCertificate=True;").Options))
-    {
-        var intervals = context.Bills.ToList();
-        foreach (var item in intervals)
-        {
-            // Console.Write(
-            //     $"{item.BillDate.Minute} {item.BillDate.Second} {item.BillDate.Hour} {item.BillDate.Day} * ?");
-          
-            var jobKey = new JobKey(item.Id.ToString());
-            q.AddJob<MyJob>(opts => opts.WithIdentity(jobKey));
-            q.AddTrigger(opts => opts
-                .ForJob(jobKey)
-                .WithIdentity(item.Id.ToString())
-                .UsingJobData("list", item.ToString())
-                .WithSchedule(CronScheduleBuilder.MonthlyOnDayAndHourAndMinute(item.BillDate.Day, 9, 41)));
-                // .WithCronSchedule("0 42 10 * * ?")
-        }
-    }
-    // var scheduler = await StdSchedulerFactory.GetDefaultScheduler();
-    // var jobKeys = await scheduler.GetJobKeys(GroupMatcher<JobKey>.AnyGroup());
-   
-
-});
-builder.Services.AddQuartzServer(options =>
-{
-    options.WaitForJobsToComplete = true;
-});
+// builder.Services.AddQuartz( async q =>
+// {
+//     q.UseMicrosoftDependencyInjectionScopedJobFactory();
+//     
+//         
+//     using (var context = new AppDbContext(new DbContextOptionsBuilder<AppDbContext>().UseSqlServer("Server=FAISAL;Database=DB_budgetManagemenet;Trusted_Connection=True;TrustServerCertificate=True;").Options))
+//     {
+//         var intervals = context.Bills.ToList();
+//         foreach (var item in intervals)
+//         {
+//             // Console.Write(
+//             //     $"{item.BillDate.Minute} {item.BillDate.Second} {item.BillDate.Hour} {item.BillDate.Day} * ?");
+//           
+//             var jobKey = new JobKey(item.Id.ToString());
+//             q.AddJob<MyJob>(opts => opts.WithIdentity(jobKey));
+//             q.AddTrigger(opts => opts
+//                 .ForJob(jobKey)
+//                 .WithIdentity(item.Id.ToString())
+//                 .UsingJobData("list", item.ToString())
+//                 .WithSchedule(CronScheduleBuilder.MonthlyOnDayAndHourAndMinute(item.BillDate.Day, 9, 41)));
+//                 // .WithCronSchedule("0 42 10 * * ?")
+//         }
+//     }
+//     // var scheduler = await StdSchedulerFactory.GetDefaultScheduler();
+//     // var jobKeys = await scheduler.GetJobKeys(GroupMatcher<JobKey>.AnyGroup());
+//    
+//
+// });
+// builder.Services.AddQuartzServer(options =>
+// {
+//     options.WaitForJobsToComplete = true;
+// });
 builder.Services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddTransient<IPersistence, DbPersistence>();
 builder.Services.AddTransient<IAuthService, AuthService>();
@@ -97,6 +99,7 @@ builder.Services.AddTransient<IGoldService, GoldService>();
 builder.Services.AddTransient<ISummaryService, SummaryService>();
 builder.Services.AddTransient<IBillingService, BillingService>();
 builder.Services.AddTransient<IJob, MyJob>();
+builder.Services.AddTransient<ITokenService, TokenService>();
 builder.Services.AddScoped<ExceptionHandlingMiddleware>();
 
 builder.Services.AddAuthentication(options =>
@@ -115,11 +118,38 @@ builder.Services.AddAuthentication(options =>
         ValidAudience = builder.Configuration["JwtSettings:Audience"],
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JwtSettings:Key"]))
     };
+    options.Events = new JwtBearerEvents
+    {
+        OnTokenValidated = async context =>
+        {
+            var tokenService = context.HttpContext.RequestServices.GetRequiredService<ITokenService>();
+
+            // Mendapatkan header Authorization
+            var authorizationHeader = context.Request.Headers["Authorization"].FirstOrDefault();
+
+            if (!string.IsNullOrEmpty(authorizationHeader) && authorizationHeader.StartsWith("Bearer "))
+            {
+                // Mendapatkan nilai token dari header Authorization
+                var bearerToken = authorizationHeader.Substring("Bearer ".Length);
+                Console.WriteLine(bearerToken);
+                // Memanggil metode di layanan token untuk memeriksa validitas token
+                var isTokenRevoked = await tokenService.IsTokenRevoked(bearerToken);
+
+                if (isTokenRevoked)
+                {
+                    context.Fail("Invalid token");
+                }
+            }
+           
+        }
+    };
+
+   
 });
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api\\budget-management-api.csproj": {}
+    "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api\\budget-management-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api\\budget-management-api.csproj": {
+    "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api\\budget-management-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api\\budget-management-api.csproj",
+        "projectUniqueName": "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api\\budget-management-api.csproj",
         "projectName": "budget-management-api",
-        "projectPath": "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api\\budget-management-api.csproj",
+        "projectPath": "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api\\budget-management-api.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\RiderProjects\\budget-management-api\\budget-management-api\\obj\\",
+        "outputPath": "C:\\Users\\user\\RiderProjects\\income-management-api\\budget-management-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
